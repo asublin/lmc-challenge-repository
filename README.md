@@ -45,3 +45,7 @@ NEXT
 ### Randomly Select Challenge
 
 NEXT
+
+### Create Future Challenge
+
+NEXT: write script to help create challenge.
