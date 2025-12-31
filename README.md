@@ -42,6 +42,23 @@ NEXT
 
 ## Usage
 
+### Create Future Challenge
+
+To faciliate creating future challenges, a script is provided to walk
+the user through the process.  To do that, type the following
+
+```bash
+./create-future-challenge.sh
+```
+
+then the user is prompted to provide the challenge name, short and
+long descriptions, as well as recommended git commands and github
+processes to create a branch and submit a pull request.
+
+Note that JSON files of future challenges do not need to contain all
+required fields of a challenge.  Indeed, these fields will
+automatically be inserted at selection time.
+
 ### Randomly Select Challenge
 
 To select the next challenge call the following script
@@ -66,19 +83,20 @@ into
 LMC<ROUND_NUMBER> - <DATE> - <CHALLENGE NAME>.json
 ```
 
-### Create Future Challenge
+### Produce Challenge Artwork
 
-To faciliate creating future challenges, a script is provided to walk
-the user through the process.  To do that, type the following
+To produce the artwork of the present challenge (the LMC logo
+overlayed by the round number of the challenge), enter the following
+command
 
 ```bash
-./create-future-challenge.sh
+./produce-challenge-artwork.sh PATH_OF_LMC_LOGO
 ```
 
-then the user is prompted to provide the challenge name, short and
-long descriptions, as well as recommended git commands and github
-processes to create a branch and submit a pull request.
+which will produce the following file
 
-Note that JSON files of future challenges do not need to contain all
-required fields of a challenge.  Indeed, these fields will
-automatically be inserted at selection time.
+```
+lmc-round-ROUND-artwork.gif
+```
+
+where ROUND is the round number of the present challenge.
