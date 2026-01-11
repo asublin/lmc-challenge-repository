@@ -44,14 +44,16 @@ read -s long_description
 echo "Provide a path of stems (empty means none):"
 read -s stems_path
 
+stems_path_dst=""
 if [ -n "${stems_path}" ]; then
-    if cp -r "${stems_path}" "future/${title}"; then
-        log_info "Stems folder created: \"future/${title}\""
+    stems_path_dst="${title}"
+    if cp -r "${stems_path}" "future/${stems_path_dst}"; then
+        log_info "Stems folder created: \"future/${stems_path_dst}\""
     else
-        log_error "Failed to create stems folder: \"future/${title}\""
+        log_error "Failed to create stems folder: \"future/${stems_path_dst}\""
     fi
 fi
 
-jq . <<< "{ \"short_description\": \"${short_description}\", \"long_description\": \"${long_description}\", \"stems_path\": \"${title}\"}" > future/"${title}.json"
+jq . <<< "{ \"short_description\": \"${short_description}\", \"long_description\": \"${long_description}\", \"stems_path\": \"${stems_path_dst}\"}" > future/"${title}.json"
 
 log_info "New challenge file created: \"future/${title}.json\""
