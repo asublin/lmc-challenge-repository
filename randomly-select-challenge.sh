@@ -63,12 +63,7 @@ jq '.rules.general += ["Regardless of any challenge-specific restriction on plug
 jq '.rules.general += ["Regardless of any software restriction, you are also allowed to use any hardware device to enhance your workflow, e.g. MIDI keyboard or other controllers."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
 # Submission rules
 jq '.rules.submission += ["You must submit your entry before the 15th of the following month, i.e. at 11:59pm (UTC) the lastest on the 14th."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
-jq '.rules.submission += ["To submit you must upload your song on the Audius platform.  For that you need to have an Audius account."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
-jq '.rules.submission += ["On Audius, click on *Upload A Track* from the *Tracks* tab of your account, or click on *Upload Your Remix* from the song promoting the challenge for this round (aka original)."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
-jq '.rules.submission += ["While filling out the details for your upload, open the *Remix Settings* menu."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
-jq '.rules.submission += ["To ensure your entry is considered, enable the *Identify as Remix* option.  Submissions that are not linked to the original will not be considered for the challenge."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
-jq '.rules.submission += ["Ideally, tag your song with #libremusicchallenge, among others of your choice."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
-jq '.rules.submission += ["Ideally, enable *Full Track Download* in the *Steams & Downloads* option."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
+jq '.rules.submission += ["To submit you must post a link of your entry to the thread corresponding to the current round on the Linux Musicians forum."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
 # Voting rules
 jq '.rules.voting += ["Voting runs from the 15th to the end of the following month of the challenge.  Failure to vote in time will result in disqualification."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
 jq '.rules.voting += ["Voting is done by ranking 5 submissions (excluding yours) from 1st (best) to 5th (worse among the 5 best)."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
@@ -76,4 +71,4 @@ jq '.rules.voting += ["Participants of previous challenges are also welcome to v
 jq '.rules.voting += ["5 points are attributed to the submission with the highest rank, 4 to the second, 3 to the third, 2 to the fourth and 1 to the fifth.  No points are attributed to submissions that have not been ranked."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
 jq '.rules.voting += ["The submission with the most points wins.  In case of ties all submissions with the maximum number of points are winners."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
 jq '.rules.voting += ["Dependening on the round the winner(s) may receive prize(s) such as AUDIO tokens."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
-jq '.rules.voting += ["To vote, write a message containing the ranking of your choice to @libremusicchallenge using the Audius platform."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
+jq '.rules.voting += ["To vote, post a message with your ranking to the corresponding thread on the Linux Musicians forum, or send it as private message to one of the organizers of the challenge."]' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
