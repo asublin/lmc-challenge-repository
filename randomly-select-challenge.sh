@@ -20,6 +20,12 @@ rnd_challenge=$((RANDOM % ${nbr_challenges}))
 # Retrieve today's date
 today_date=$(date +%F)
 
+# Set start and end dates
+this_year=$(date +%Y)
+next_month=$(date -d "next month" +%m)
+start_date="$today_date"
+end_date="${this_year}-${next_month}-15"
+
 # Calculate next round index
 nbr_present_challenges=$(get_present_challenge | wc -l)
 if [[ 1 -ne ${nbr_present_challenges} ]]; then
@@ -47,8 +53,9 @@ for f in future/*; do
     i=$((i + 1))
 done
 
-# Complete challenge with round, start date and end date
-# NEXT
+# Complete challenge with round, start and end dates
+log_info "Complete \"$dst\" with round, start and end dates"
+jq --arg r "$lmc_idx" --arg s "$start_date" --arg e "$end_date" '. += {"round": $r, "start_date": $s, "end_date": $e}' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
 # Complete challenge with general fields
 log_info "Complete \"$dst\" with general fields"
 jq '. += {"rules": {}}' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
