@@ -140,20 +140,40 @@ create an `ia.ini` file under (from your home directory)
 
 containing the access and the secret keys.
 
+#### Add Submissions to Present Challenge
+
+Once the submissions are in they should be registered in the present
+challenge JSON file.  For that use the following:
+
+```
+./add-submissions.sh
+```
+
 #### Upload Present Round
 
-To upload the submissions to the Internet Archive run the following
-script
+To upload the submissions to the Internet Archive run the following:
 
 ```bash
 ./upload-submissions-to-ia.sh
 ```
 
-assuming that the submissions are under the current folder and are
+assuming that the submissions are under the current folder, are
 formatted as follows:
 
 ```
 AUTHOR - TITLE.flac
+```
+
+If the submissions are not all in this format, then you can use the
+`fix-submission.sh` described below.
+
+#### Fix Submissions
+
+To fix the file names and the format of the submissions, run the
+following:
+
+```
+./fix-submission.sh SUBMISSION_TO_BE_FIXED
 ```
 
 #### Download Metadata from Previous Rounds
