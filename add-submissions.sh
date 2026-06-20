@@ -13,6 +13,11 @@ source common.sh
 artists=()
 tracks=()
 
+# Ask for the Challenge URL
+present_challenge="$(get_present_challenge)"
+read -rp "Enter the URL of the present challenge: " url
+jq --arg url "$url" '.url = $url' "$present_challenge" > "${present_challenge}.$$" && mv "${present_challenge}.$$" "$present_challenge"
+
 # Iteratively ask for artists and track names
 while true; do
     read -rp "Artist (leave empty to finish): " artist
@@ -31,7 +36,6 @@ while true; do
 done
 
 # Add this information in present challenge JSON file
-present_challenge="$(get_present_challenge)"
 for i in "${!artists[@]}"; do
     a="${artists[i]}"
     t="${tracks[i]:-}"
