@@ -63,7 +63,7 @@ get_submission_tracks() {
 
 # Extract LMC round index of a challenge given its file path
 get_lmc_round() {
-    jq ".round" "$1"
+    remove_outer_quotes $(jq ".round" "$1")
 }
 
 # Extract title of a challenge given its file path
@@ -95,4 +95,14 @@ get_lmc_idx() {
 # Get submission filenames of a given challenge (given its JSON file)
 get_submission_filenames() {
     jq -r '.submissions[] | "\(.artist) - \(.track).flac"' "$1"
+}
+
+# Extract short description of a challenge given its file path
+get_lmc_short_description() {
+    jq -r ".short_description" "$1"
+}
+
+# Extract long description of a challenge given its file path
+get_lmc_long_description() {
+    jq -r ".long_description" "$1"
 }
