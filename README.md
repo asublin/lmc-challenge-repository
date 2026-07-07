@@ -125,6 +125,15 @@ lmc-round-ROUND-artwork.gif
 
 where ROUND is the round number of the present challenge.
 
+### Publish Challenge to LinuxMusicians
+
+Go to [The Producer's Area of LinuxMusicians](https://linuxmusicians.com/viewforum.php?f=40),
+click on [New Topic](https://linuxmusicians.com/posting.php?mode=post&f=40), run
+```bash
+./render-present-challenge-annoucement.sh
+```
+and fill the topic with the provided information.
+
 ### Upload to the Internet Archive
 
 #### Configure
