@@ -4,18 +4,6 @@
 
 source common.sh
 
-#############
-# Functions #
-#############
-
-# Remove the outer quotes of a string if any
-remove_outer_quotes() {
-    local str=$1
-    str="${str#\"}"
-    str="${str%\"}"
-    echo "${str}"
-}
-
 ########
 # Main #
 ########

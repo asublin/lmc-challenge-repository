@@ -36,6 +36,14 @@ log_error() {
 # JSON Management #
 ###################
 
+# Remove the outer quotes of a string if any
+remove_outer_quotes() {
+    local str=$1
+    str="${str#\"}"
+    str="${str%\"}"
+    echo "${str}"
+}
+
 # Get the JSON file corresponding to the present challenge.
 get_present_challenge() {
     ls present/LMC*.json
