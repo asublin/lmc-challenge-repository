@@ -1,5 +1,6 @@
 {
+  "title": "UhhyouWebSynthesizers",
   "short_description": "The challenge for this round is to make a track using only samples generated with Uhhyou Web Synthesizers.",
-  "long_description": "Uhhyou Web Synthesizers is a collection of musical synthesizers to render WAVE files, https://ryukau.github.io/UhhyouWebSynthesizers/. Your challenge for this round is to **make a track using only samples generated with Uhhyou Web Synthesizers**.  You can use as many samples generated with Uhhyou Web Synthesizers as you like, with any effect, any sampler and any DAW as long as they are 𝐟𝐫𝐞𝐞 𝐚𝐧𝐝 𝐨𝐩𝐞𝐧 𝐬𝐨𝐮𝐫𝐜𝐞. You are not allowed to record audio intrumental or vocal performances. *Happy Music Making!*",
+  "long_description": "[Uhhyou Web Synthesizers](https://ryukau.github.io/UhhyouWebSynthesizers) is a collection of musical synthesizers to render WAVE files. Your challenge for this round is to **make a track using only samples generated with Uhhyou Web Synthesizers**.  You can use as many samples generated with Uhhyou Web Synthesizers as you like, with any effect, any sampler and any DAW as long as they are **free and open source**. You are not allowed to record audio intrumental or vocal performances. *Happy Music Making!*",
   "stems_path": ""
 }
