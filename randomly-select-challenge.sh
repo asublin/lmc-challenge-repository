@@ -33,8 +33,8 @@ if [[ 1 -ne ${nbr_present_challenges} ]]; then
 fi
 present_challenge="$(get_present_challenge)"
 present_challenge_base="$(basename "${present_challenge}")"
-previous_lmc_idx=$(get_lmc_idx "${present_challenge_base}")
-lmc_idx=$((previous_lmc_idx + 1))
+previous_lmc_round=$(get_lmc_round "${present_challenge_base}")
+lmc_round=$((previous_lmc_round + 1))
 
 # Move existing present challenge to past
 log_info "Move previous challenge \"${present_challenge}\" to the past folder"
@@ -45,7 +45,7 @@ i=0
 for f in future/*; do
     f_base=$(basename "${f}")
     if [[ $i -eq $rnd_challenge ]]; then
-        dst="present/LMC${lmc_idx} - ${today_date} - ${f_base}"
+        dst="present/LMC${lmc_round} - ${today_date} - ${f_base}"
         mv "${f}" "${dst}"
         iplusone=$((i + 1))
         log_info "Select challenge \"${f}\" and move it to \"${dst}\""
@@ -53,9 +53,9 @@ for f in future/*; do
     i=$((i + 1))
 done
 
-# Complete challenge with round, start and end dates
+# Complete challenge with title, round, start and end dates
 log_info "Complete \"$dst\" with round, start and end dates"
-jq --arg r "$lmc_idx" --arg s "$start_date" --arg e "$end_date" '. += {"round": $r, "start_date": $s, "end_date": $e}' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
+jq --arg r "$lmc_round" --arg s "$start_date" --arg e "$end_date" '. += {"round": $r, "start_date": $s, "end_date": $e}' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
 # Complete challenge with general fields
 log_info "Complete \"$dst\" with general fields"
 jq '. += {"rules": {}}' "${dst}" > "${dst}.$$" && mv "${dst}.$$" "${dst}"
