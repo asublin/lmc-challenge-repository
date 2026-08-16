@@ -29,5 +29,20 @@
       "Dependening on the round the winner(s) may receive prize(s) such as AUDIO tokens.",
       "To vote, post a message with your ranking to the corresponding thread on the Linux Musicians forum, or send it as private message to one of the organizers of the challenge."
     ]
-  }
+  },
+  "url": "https://linuxmusicians.com/viewtopic.php?t=29735",
+  "submissions": [
+    {
+      "artist": "Amberdrake",
+      "track": "Bit'O-Drums"
+    },
+    {
+      "artist": "Oasynth",
+      "track": "Kymata Psammou"
+    },
+    {
+      "artist": "A-Lin",
+      "track": "Perculate"
+    }
+  ]
 }
