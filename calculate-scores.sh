@@ -17,9 +17,9 @@ echo "$present_challenge"
 jq '.votes' "${present_challenge}"
 
 # NEXT: have this being automatically filled by jq
-lst_1st=("sg75" "sg75" "RobinDe" "Amberdrake")
-lst_2nd=("Amberdrake" "RobinDe" "A-Lin" "sg75")
-lst_3rd=("RobinDe" "A-Lin" "Amberdrake" "A-Lin")
+lst_1st=("Oasynth" "A-Lin" "A-Lin")
+lst_2nd=("Amberdrake" "Amberdrake" "Oasynth")
+lst_3rd=()
 lst_4th=()
 lst_5th=()
 
@@ -44,6 +44,7 @@ for i in ${!lst_5th[@]}; do
     s=entry_to_score["${lst_5th[${i}]}"]
     entry_to_score["${lst_5th[${i}]}"]=$((s + 1))
 done
+# NEXT: produce a table (or CSV): Author, Track, Rank, Score
 echo "${entry_to_score[@]}"
 echo "${!entry_to_score[@]}"
 
