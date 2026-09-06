@@ -223,3 +223,23 @@ format
 
 The script will try to handle slight variations of this format though,
 if it fails you will have to fix manually.
+
+Then call
+
+```
+./calculate-scores.sh
+```
+
+NEXT: complete implementation of this!
+
+which will populate the JSON file with a map from author to score like
+
+```
+  "scores": [
+    {"artist": "Artist1", "track": "Track1", "rank": 1, "score": 2},
+    {"artist": "Artist2", "track": "Track2", "rank": 2, "score": 1},
+    ...
+  ]
+```
+
+
