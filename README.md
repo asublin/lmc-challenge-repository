@@ -74,12 +74,12 @@ Note that JSON files of future challenges do not need to contain all
 required fields of a challenge.  Indeed, these fields will
 automatically be inserted at selection time.
 
-### Randomly Select Challenge
+### Select Challenge
 
 To select the next challenge call the following script
 
 ```bash
-./randomly-select-challenge.sh
+./select-challenge.sh
 ```
 
 which will randomly select a challenge, move it to the

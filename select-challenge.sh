@@ -32,8 +32,7 @@ if [[ 1 -ne ${nbr_present_challenges} ]]; then
     log_error "There is not exactly one challenge in the present folder.  Please clean up the folder."
 fi
 present_challenge="$(get_present_challenge)"
-present_challenge_base="$(basename "${present_challenge}")"
-previous_lmc_round=$(get_lmc_round "${present_challenge_base}")
+previous_lmc_round=$(get_lmc_round "${present_challenge}")
 lmc_round=$((previous_lmc_round + 1))
 
 # Move existing present challenge to past
