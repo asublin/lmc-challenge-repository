@@ -44,5 +44,48 @@
       "artist": "A-Lin",
       "track": "Perculate"
     }
+  ],
+  "votes": [
+    {
+      "1": {
+        "artist": "Oasynth",
+        "track": "Kymata Psammou"
+      }
+    },
+    {
+      "2": {
+        "artist": "Amberdrake",
+        "track": "Bit'O-Drums"
+      }
+    },
+    {
+      "1": {
+        "artist": "A-Lin",
+        "track": "Perculate"
+      }
+    },
+    {
+      "2": {
+        "artist": "Amberdrake",
+        "track": "Bit'O-Drums"
+      }
+    },
+    {
+      "1": {
+        "artist": "A-Lin",
+        "track": "Perculate"
+      }
+    },
+    {
+      "2": {
+        "artist": "Oasynth",
+        "track": "Kymata Psammou"
+      }
+    }
+  ],
+  "scores": [
+    {"artist": "A-Lin", "track": "Perculate", "rank": 1, "score": 10},
+    {"artist": "Oasynth", "track": "Kymata Psammou", "rank": 2, "score": 9},
+    {"artist": "Amberdrake", "track": "Bit'O-Drums", "rank": 3, "score": 8}
   ]
 }
