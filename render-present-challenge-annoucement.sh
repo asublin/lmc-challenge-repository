@@ -25,3 +25,7 @@ echo
 echo "[b]${lmc_short_description}[/b]"
 echo
 pandoc --from=markdown <<< "$lmc_long_description" --to=pandoc-bbcode-phpbb/phpbb.lua
+echo
+echo "Entries must be posted here before ?? ????? UTC. Meaning the last minute to submit your entry will be ?? ????? 23:59 UTC."
+echo
+echo "The general rules can be found [url=???]here[/url] (and will be rendered in a nicer format eventually)."
