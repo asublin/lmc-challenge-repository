@@ -52,3 +52,5 @@ ndst="Normalized - $dst"
 log_info "Normalize \"$dst\""
 sox "$dst" "$ndst" gain -n
 mv "$ndst" "$dst"
+
+# NEXT: remove metadata conflicting with IA, use metaflac for that.
