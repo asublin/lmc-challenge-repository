@@ -44,5 +44,48 @@
       "artist": "Oasynth",
       "track": "p0st-hum4n skyL1ne"
     }
-  ]
+  ],
+  "votes": [
+    {
+      "1": {
+        "artist": "Oasynth",
+        "track": "p0st-hum4n skyL1ne"
+      }
+    },
+    {
+      "2": {
+        "artist": "Amberdrake",
+        "track": "I Forgot"
+      }
+    },
+    {
+      "1": {
+        "artist": "A-Lin",
+        "track": "Sand Formation"
+      }
+    },
+    {
+      "2": {
+        "artist": "Amberdrake",
+        "track": "I Forgot"
+      }
+    },
+    {
+      "1": {
+        "artist": "A-Lin",
+        "track": "Sand Formation"
+      }
+    },
+    {
+      "2": {
+        "artist": "Oasynth",
+        "track": "p0st-hum4n skyL1ne"
+      }
+    }
+  ],
+    "scores": [
+        {"artist": "A-Lin", "track": "Sand Formation", "rank": 1, "score": 10},
+        {"artist": "Oasynth", "track": "p0st-hum4n skyL1ne", "rank": 2, "score": 9},
+        {"artist": "Amberdrake", "track": "I Forgot", "rank": 3, "score": 8}
+    ]
 }
