@@ -20,10 +20,7 @@ artists_at_rank() {
 ########
 
 # Declare associative array mapping entries to scores
-declare -A entry_to_score
-
-# # Declare arrays holding the ranked artists
-# declare -a lst_1st=() lst_2nd=() lst_3rd=() lst_4th=() lst_5th=()
+declare -A author_to_score
 
 # Get present challenge filepath
 present_challenge="$(get_present_challenge)"
@@ -50,45 +47,46 @@ echo "Artists ranked third: ${lst_3rd[@]}"
 echo "Artists ranked fourth: ${lst_4th[@]}"
 echo "Artists ranked fifth: ${lst_5th[@]}"
 
-# Populate entry_to_score
+# Populate author_to_score
 for i in ${!lst_1st[@]}; do
     author="${lst_1st[${i}]}"
     if [ -n "$author" ]; then
-        s=entry_to_score["$author"]
-        entry_to_score["$author"]=$((s + 5))
+        s=${author_to_score["$author"]}
+        author_to_score["$author"]=$((s + 5))
+        echo "author = $author, s = $s"
     fi
 done
 for i in ${!lst_2nd[@]}; do
     author="${lst_2nd[${i}]}"
     if [ -n "$author" ]; then
-        s=entry_to_score["$author"]
-        entry_to_score["$author"]=$((s + 4))
+        s=${author_to_score["$author"]}
+        author_to_score["$author"]=$((s + 4))
     fi
 done
 for i in ${!lst_3rd[@]}; do
     author="${lst_3rdnd[${i}]}"
     if [ -n "$author" ]; then
-        s=entry_to_score["$author"]
-        entry_to_score["$author"]=$((s + 3))
+        s=${author_to_score["$author"]}
+        author_to_score["$author"]=$((s + 3))
     fi
 done
 for i in ${!lst_4th[@]}; do
     author="${lst_4th[${i}]}"
     if [ -n "$author" ]; then
-        s=entry_to_score["$author"]
-        entry_to_score["$author"]=$((s + 2))
+        s=${author_to_score["$author"]}
+        author_to_score["$author"]=$((s + 2))
     fi
 done
 for i in ${!lst_5th[@]}; do
     author="${lst_5th[${i}]}"
     if [ -n "$author" ]; then
-        s=entry_to_score["$author"]
-        entry_to_score["$author"]=$((s + 1))
+        s=${author_to_score["$author"]}
+        author_to_score["$author"]=$((s + 1))
     fi
 done
 
 # NEXT: produce a table (or CSV): Author, Track, Rank, Score
-echo "${entry_to_score[@]}"
-echo "${!entry_to_score[@]}"
+echo "${author_to_score[@]}"
+echo "${!author_to_score[@]}"
 
 # # NEXT: automatically populate present json file with scores
