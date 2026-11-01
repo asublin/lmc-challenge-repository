@@ -46,14 +46,6 @@ NEXT
   ```bash
   git clone https://github.com/elizagamedev/pandoc-bbcode-phpbb.git
   ```
-<!-- - [rustup](https://rustup.rs/) -->
-<!-- - [markdown2unicode](https://github.com/qtfkwk/markdown2unicode), do the following -->
-<!--   ```bash -->
-<!--   git clone https://github.com/qtfkwk/markdown2unicode.git -->
-<!--   cd markdown2unicode -->
-<!--   cargo build --release -->
-<!--   cargo install --path . -->
-<!--   ``` -->
 
 ## Usage
 
